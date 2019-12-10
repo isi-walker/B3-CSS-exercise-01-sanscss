@@ -1,0 +1,123 @@
+
+
+header {
+    background-color: #333;
+}
+
+.site-id {
+    display: inline-block;
+    float: left;
+    padding: 20px;
+    color: #ffffff;
+}
+
+header nav ul {
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+   display: inline-block;
+   font-size: 20px;
+   padding: 20px;
+}
+
+header nav a {
+    color: #ffffff;
+}
+
+
+@media (min-width: 400px) {
+    .hero {
+        background-image: url("../images/md/md-image-21.jpg");
+        background-color: #000000; 
+        height: 500px; 
+        background-position: center; /
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+}
+
+@media (min-width: 600px) {
+    .hero {
+        background-image: url("../images/md/md-image-12.jpg");
+        background-color: #cccccc; 
+        height: 500px; 
+        background-position: center; /
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+}
+
+
+@media screen and (min-width: 1000px){
+    .hero {
+        background-image: url("../images/md/md-image-10.jpg");
+        background-color: #cccccc; 
+        height: 500px; 
+        background-position: center; /
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        background-image: url("../images/md/md-image-16.jpg");
+        background-color: #cccccc; 
+        height: 500px; 
+        background-position: center; /
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+}
+
+.introduction {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    color: #ffffff;
+    padding: 200px 0;
+}
+.first-text-section{
+    display: flex;
+    padding: 20px;
+    text-align: center;
+}
+
+.second-text-fixed-attachment {
+    background-image: url("../images/md/md-image-21.jpg");
+    background-color: #000000; 
+    height: 500px; 
+    background-position: center; /
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.second-text-fixed-attachment p{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    color: #ffffff;
+    padding: 50px;
+}
+
+.id_pic{
+    width: 100px;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    background-color: bisque;
+    padding: 20px;
+}
+
+footer div, footer nav {
+    margin: 0 20px;
+    
+
+}
