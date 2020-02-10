@@ -24,6 +24,10 @@ header {
     text-decoration: none;
 }
  */
+
+ /* Menu */
+
+
 .menu-toggle .burger-breads span {
     display: block;
     width: 33px;
@@ -203,7 +207,8 @@ Horizontal menu
     .main-menu a:hover,
     .main-menu a:focus {
         background: none; /* Remove background from off-canvas styling */
-        color: #c00;
+        color: #FFC15E;
+        text-decoration: none;
     }
 }
 
@@ -349,7 +354,7 @@ Horizontal menu
 
 footer {
     display: flex;
-    background-color: #333333;
+    background-color: #0F1914;
     color : #ffffff;
     padding: 20px;
     align-items: center;
@@ -451,6 +456,15 @@ footer li {
 
 /* Proboscis Page */
 
+.hero-prob {
+    background-image: url("../images/md/md-image-23.jpg");
+    background-color: #cccccc; 
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
 .dossier-top {
     display: flex;
 }
@@ -459,13 +473,18 @@ footer li {
 .section-content {
     display: block;
     column-count: 4;
+    padding: 1em;
 }
 
 .strip-image img {
     width: 2000px;
-    height: 1000px;
+    height: 500px;
     object-fit: cover;
     overflow: hidden;
+}
+
+.strip-image {
+    margin: 1em 0 1em 0;
 }
 
 .dossier-top-content {
