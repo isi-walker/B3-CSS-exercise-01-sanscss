@@ -12,24 +12,40 @@
     <meta name="msapplication-config" content="images/logos-n-icons/favs/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <title>Page one</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="css/apesv2.css">
   </head>
   <body class="dossier">
-  <header>
-    <div class="site-id">
-      <img src="images/logos-n-icons/logo-01.svg" alt="Gorilla CSS" class="logo">
-      <h1 class="site-title">Gorilla CSS</h1>
-    </div>
+    <header>
+      <a href="#main-menu" class="menu-toggle">
+          <div class="burger-breads">
+          <span></span>
+          <span></span>
+          <span></span>
+          </div>
+          </a>
+  <div class="site-id">
+    <!-- <img src="images/logos-n-icons/logo-01.svg" alt="Gorilla CSS" class="logo"> -->
+    <h1 class="site-title">Gorilla CSS</h1>
+  </div>
 
-    <nav>
+  <nav id="main-menu" class="main-menu">
+      <a href="#main-menu-toggle" class="menu-close">
+          <div class="burger-breads close">
+          <span></span>
+          <span></span>
+          <span></span>
+          </div>
+          </a>
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="list.html">Lists</a></li>
         <li><a href="01-proboscis.html">Proboscis</a></li>
       </ul>
-    </nav>
-
-  </header>
+  </nav>
+  <a href="#main-menu-toggle" class="backdrop" hidden></a>
+</header>
 
   <div class="hero">
     <div class="introduction">
@@ -40,7 +56,7 @@
 
 
   <section class="dossier-top clearfix">
-      <img src="images/portraits/pt-image-00.jpg" alt="A portrait of a proboscis monkey">
+      <img src="images/portraits/pt-image-03.jpg" alt="A portrait of a proboscis monkey">
       <div class="dossier-top-content">
         <div>
         <h2>Proboscis Monkeys</h2>
@@ -52,7 +68,7 @@
     </section>
 
 
-    <section class="">
+    <section class="gorilla-desc">
 
       <div class="section-content main-content">
       <p>When Jane Goodall first witnessed Gombe chimpanzee David Greybeard fishing for termites by manipulating blades of grass in 1960, the line between humans and other animals suddenly became blurry. Tool use was no longer uniquely human, leading Dr. Louis Leakey, Jane’s mentor, to famously say, “Now we must redefine tool, redefine man, or accept chimpanzees as human.”  </p>
@@ -90,17 +106,22 @@
 </div>
 
 <footer>
-  <div class="">
-    <h1>I'm a footer menu</h1>
-    <p>When I grow up, I'm going to be beautiful</p>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="list.html">Lists</a></li>
-        <li><a href="01-proboscis.html">Proboscis</a></li>
-      </ul>
-    </nav>
+  <div class="id_zone">
+      <img src="images/id/id_picture.jpg" alt="" class="id_pic">
   </div>
+  <div class="contacts">
+    <p>Israel AGBOTSE</p>
+    <p>Mail : isi.agbotse@gmail.com</p>
+    <p>Tel : 06 59 5 64 82</p>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="list.html">Lists</a></li>
+      <li><a href="01-proboscis.html">Proboscis</a></li>
+      <li><a href="/">Apes V2</a></li>
+    </ul>
+  </nav>
 </footer>
 
   </body>

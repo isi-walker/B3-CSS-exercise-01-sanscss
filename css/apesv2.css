@@ -1,7 +1,7 @@
-
+/* 
 
 header {
-    background-color: #333;
+    background-color: #1A3D24;
 }
 
 .site-id {
@@ -10,44 +10,259 @@ header {
     padding: 20px;
     color: #ffffff;
 }
+ */
 
-header nav ul {
-  list-style-type: none;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-header nav li {
+/* .main-menu li {
    display: inline-block;
    font-size: 20px;
    padding: 20px;
-}
 
-header nav a {
+} */
+
+/* .main-menu a {
     color: #ffffff;
+    text-decoration: none;
+}
+ */
+.menu-toggle .burger-breads span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #cdcdcd;
+    z-index: 1;
 }
 
+.menu-close .burger-breads span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    border-radius: 3px;
+    z-index: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: rgb(127,140,167);
+}
+
+.menu-close .burger-breads span:nth-child(2) {
+    transform: rotate(135deg) translate(-6px, 9px);
+}
+
+.menu-close .burger-breads span:nth-child(3) {
+    opacity: 0;
+}
+
+.menu-toggle {
+    display: inline-block;
+    padding: 1em;
+
+}
+
+.main-menu {
+    position: absolute;
+
+    top : 0;
+    bottom: 0;
+    overflow-x: scroll;
+    overflow-y: visible;
+    transition: left 0.3s ease, box-shadow 0.3s ease;
+    z-index: 999;
+}
+
+.main-menu ul {
+    margin: 0;
+    padding: 2.5em 0 0;
+    min-height: 100%;
+    width: 200px;
+    background: #1A3D24;
+  }
+  .main-menu a {
+    display: block;
+    padding: .75em 15px;
+    line-height: 1em;
+    font-size:1em;
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid rgb(127,140,167);
+  }
+  .main-menu li:first-child a {
+    border-top: 1px solid rgb(127,140,167);
+  }
+  .main-menu a:hover,
+  .main-menu a:focus {
+    background: #333;
+    text-decoration: underline;
+  }
+  .main-menu .menu-close {
+    position: absolute;
+    right: 0;
+    top:0;
+    border-bottom: 1px solid transparent;
+  }
+
+  .main-menu {
+      left: -200px;
+  }
+
+.main-menu:target {
+    display: block;
+    left: 0;
+    outline: none;
+    box-shadow: 3px 0 12px rgba(0,0,0,.25);
+}
+
+.main-menu:target .menu-close{
+    z-index: 1001;
+}
+
+.main-menu:target ul {
+    position: relative;
+    z-index: 1000;
+}
+
+.main-menu:target + .backdrop {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background: #000;
+    background: rgba(0,0,0,.85);
+    cursor: default;
+}
+
+@supports (position: fixed) {
+    .main-menu,
+    .main-menu:target + .backdrop {
+        position: fixed;
+    }
+}
+
+
+/* Larger screen styling 
+Horizontal menu
+*/
+
+@media (min-width : 768px) {
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+    }
+
+    /* Undo positioning of off-canvas menu */
+
+    header {
+        background-color: #1A3D24;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .site-id {
+        display: inline-block;
+        float: left;
+        padding: 20px;
+        color: #ffffff;
+    }
+    
+    
+     .main-menu li {
+       display: inline-block;
+       font-size: 20px;
+       padding: 20px;
+    
+    } 
+    .main-menu {
+        position: relative;
+        left: auto;
+        top : auto;
+        height: auto;
+        display: block;
+    }
+
+    .main-menu ul {
+        display: flex;
+        /* Undo off-canvas styling */
+        list-style-type: none;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width : 100%;
+    }
+
+    .main-menu a {
+        color: #ffffff;
+        text-decoration: none;
+        border : 0 !important; /* Remove borders from off-canvas styling */
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+        background: none; /* Remove background from off-canvas styling */
+        color: #c00;
+    }
+}
+
+
+/* Fin du travail sur le menu */
+
+
+
+/* Home page - Using : 
+- background-image, 
+- transform trasnlate, 
+- Background changes for 4 screen sizes 
+- One background image attachment fixed of a orangutan face, */
 
 @media (min-width: 400px) {
     .hero {
         background-image: url("../images/md/md-image-21.jpg");
         background-color: #000000; 
         height: 500px; 
-        background-position: center; /
+        background-position: center;
         background-repeat: no-repeat; 
         background-size: cover;
+    }
+
+    .first-text-section{
+        display: block;
+        padding: 20px;
+        column-count: 1;
+        min-height: 300px;
+    }
+
+    .product-list-item {
+        width: 100%;
+        display: block;
+        margin-top: 2em;
     }
 }
 
 @media (min-width: 600px) {
     .hero {
-        background-image: url("../images/md/md-image-12.jpg");
+        background-image: url("../images/md/md-image-16.jpg");
         background-color: #cccccc; 
         height: 500px; 
-        background-position: center; /
+        background-position: center;
         background-repeat: no-repeat; 
         background-size: cover;
+    }
+
+    .first-text-section{
+        display: block;
+        padding: 20px;
+        column-count: 2;
+        min-height: 300px;
+    }
+
+    .product-list-item {
+        width: 50%;
+        display: block;
+        margin-top: 2em;
     }
 }
 
@@ -57,7 +272,7 @@ header nav a {
         background-image: url("../images/md/md-image-10.jpg");
         background-color: #cccccc; 
         height: 500px; 
-        background-position: center; /
+        background-position: center;
         background-repeat: no-repeat; 
         background-size: cover;
     }
@@ -65,33 +280,55 @@ header nav a {
 
 @media screen and (min-width: 1200px) {
     .hero {
-        background-image: url("../images/md/md-image-16.jpg");
+        background-image: url("../images/md/md-image-12.jpg");
         background-color: #cccccc; 
         height: 500px; 
-        background-position: center; /
+        background-position: center; 
         background-repeat: no-repeat; 
         background-size: cover;
+    }
+
+    .first-text-section{
+        display: block;
+        padding: 20px;
+        column-count: 4;
+        min-height: 300px;
+    }
+
+    .product-list-item {
+        width: 25%;
+        display: block;
+        margin-top: 2em;
     }
 }
 
 .introduction {
-    margin: auto;
-    width: 50%;
-    text-align: center;
+    position: absolute;
+    max-width: 600px;
+    transform: translate(-50%, -50%);
+    background-color: #0000006e;
     color: #ffffff;
-    padding: 200px 0;
-}
-.first-text-section{
-    display: flex;
-    padding: 20px;
+    left: 50%;
+    top: 50%;
     text-align: center;
+    padding: 2em;
+    /* margin: auto;
+    width: 50%;
+    padding: 200px 0; */
 }
 
+.introduction p{
+    color: #ffffff;
+    margin-top: 1em;
+}
+
+
 .second-text-fixed-attachment {
+    display: flex;
     background-image: url("../images/md/md-image-21.jpg");
     background-color: #000000; 
     height: 500px; 
-    background-position: center; /
+    background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
     background-attachment: fixed;
@@ -112,12 +349,127 @@ header nav a {
 
 footer {
     display: flex;
-    background-color: bisque;
+    background-color: #333333;
+    color : #ffffff;
     padding: 20px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 footer div, footer nav {
     margin: 0 20px;
-    
+}
 
+footer a, footer p {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer a:hover {
+    color: red;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+.teaser-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1em;
+
+}
+
+
+
+.teaser-list figure {
+    margin: auto;
+    padding: 1em;
+}
+/* Gorille des plaines de l'ouest */
+
+#gorille_plaine_ouest section{
+    padding: 20px;
+    text-align: center;
+}
+
+.hero_ouest {
+    background-image: url("../images/lg/lg-image-04.jpg");
+    background-color: #cccccc; 
+    height: 500px; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+
+
+
+/* Liste de gorilles : Using CSS Grid */
+
+.gorilla-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    justify-content: space-evenly;
+    padding: 1em;
+
+}
+
+.list-content h1{
+    text-align: center;
+    padding: 1.5em 0 1.5em 0;
+}
+
+.goilla-list-item h3, .product-list-item h3 {
+    text-align: center;
+    padding: .5em;
+}
+
+.goilla-list-item p, .product-list-item p {
+    text-align: justify;
+} 
+
+.goilla-list-item a, .product-list-item a{
+    display: block;
+    margin: .5em auto;
+    width: 50%;
+    text-decoration: none;
+    color: #fff;
+    background-color: #193d24;
+    padding: .5em;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.goilla-list-item figure, .product-list-item figure{
+    padding: 1em;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* Proboscis Page */
+
+.dossier-top {
+    display: flex;
+}
+
+
+.section-content {
+    display: block;
+    column-count: 4;
+}
+
+.strip-image img {
+    width: 2000px;
+    height: 1000px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.dossier-top-content {
+    padding: 1em;
+    text-align: center;
+    margin: auto;
 }

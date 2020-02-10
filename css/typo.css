@@ -3,27 +3,36 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    background-color: #F8F9FA;
+    font-weight: 400;
+}
+
+#gorille_plaine_ouest {
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+    line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
 }
 
 p {
-
+   color: #333333;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif; 
+    font-weight: 600;
+    color: #FFC15E;
 }
 
 h1 {
- font-size: 30px;
+ font-size: 3em;
 }
 
 h2 { 
-    font-size: 25px;
+    font-size: 2em;
 }
   
 h3 {
-    font-size: 20px;
+    font-size: 1.5em;
 }
 
 h4 {}
